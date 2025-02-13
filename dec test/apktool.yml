@@ -1,0 +1,23 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: foza-release.apk
+compressionType: false
+doNotCompress: null
+isFrameworkApk: false
+packageInfo: null
+sdkInfo: null
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  R.txt: '8'
+  classes.jar: '8'
+  proguard.txt: '8'
+  aidl/lu/die/foza/Data/FozaPrivacyAbuseInfo.aidl: '8'
+  aidl/lu/die/foza/Data/FozaProcessConfig.aidl: '8'
+  aidl/lu/die/foza/Data/FozaTargetProcessInfo.aidl: '8'
+  jni/arm64-v8a/libloader.so: '8'
+  jni/armeabi-v7a/libloader.so: '8'
+  jni/x86/libloader.so: '8'
+  jni/x86_64/libloader.so: '8'
+usesFramework: null
+version: 2.6.1
+versionInfo: null
