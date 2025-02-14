@@ -1,0 +1,21 @@
+/storage/emulated/0/Android/obb/host_app_package/scopedStorage/app_package/Android/obb/app_package/
+/storage/emulated/0/Android/obb/host_app_package/scopedStorage/app_package/Android/data/app_package/files/
+/storage/emulated/0/Android/obb/host_app_package/scopedStorage/app_package/Android/data/app_package/cache/
+
+/data/user/0/host_app_package/app_interior/app_package/base.apk
+/data/user/0/host_app_package/app_interior/app_package/lib/
+/data/user/0/host_app_package/app_interior/app_package/installation.bin
+/data/user/0/host_app_package/app_interior/app_package/components.bin
+
+/data/user/0/host_app_package/app_data/app_package/0/databases/
+/data/user/0/host_app_package/app_data/app_package/0/shared_prefs/
+/data/user/0/host_app_package/app_data/app_package/0/files/
+/data/user/0/host_app_package/app_data/app_package/0/no_backup
+/data/user/0/host_app_package/app_data/app_package/0/files/data/app/app_package-8d566bab/
+/data/user/0/host_app_package/app_data/app_package/0/app_crashKit/
+/data/user/0/host_app_package/app_data/app_package/0/app_webview/
+/data/user/0/host_app_package/app_data/app_package/0/cache/
+/data/user/0/host_app_package/app_data/app_package/0/app_textures/
+/data/user/0/host_app_package/app_data/app_package/0/oat/arm64/Anonymous-DexFile@2140979419.vdex
+
+installed app_package package path 
