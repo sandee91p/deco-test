@@ -1,0 +1,113 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'top.niunaijun.blackobfuscator'
+    id 'stringfog'
+}
+
+
+import com.github.megatronking.stringfog.plugin.StringFogMode
+import com.github.megatronking.stringfog.plugin.kg.RandomKeyGenerator
+
+stringfog {
+    implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
+    packageName 'com.github.megatronking.stringfog.app'
+    enable false
+    fogPackages = [""," ","i","de","lu","me","log","top","org","red","bin","apk","redbox","okio","okhttp3","net_62v","redzonerror","com.redx"]
+    kg new RandomKeyGenerator()
+    mode StringFogMode.bytes
+}
+BlackObfuscator {
+    enabled false
+    depth 3
+    obfClass = ["log","apk","com.redx"]
+    blackClass = ["java","com","kotlin","kotlinx","android","androidx","redbox.App","redzonerror","log.PrDownloader",
+                  "red.box.spl.MainActivity", "red.box.HomeActivity","cryo"]
+}
+android {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\AMyAndroidProject\\#Android\\CryoCheat\\11111111.jks')
+            storePassword '11111111'
+            keyAlias 'key0'
+            keyPassword '11111111'
+        }
+
+    }
+    compileSdk 35
+    defaultConfig {
+        applicationId "com.container.system"
+        minSdk 26
+        // Set target sdk to 28 when you want cheat app support like GameGuardian
+        //noinspection ExpiredTargetSdkVersion,EditedTargetSdkVersion
+        targetSdkVersion 35
+        versionCode 120
+        versionName "1.1"
+
+        ndk {
+            //noinspection ChromeOsAbiSupport
+            abiFilters 'arm64-v8a' // 'armeabi-v7a',
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-releases.pro', 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs = [
+                '-Xno-param-assertions',
+                '-Xno-call-assertions',
+                '-Xno-receiver-assertions'
+        ]
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+    dependenciesInfo {
+        includeInApk true
+        includeInBundle true
+    }
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.container.system'
+    externalNativeBuild {
+//        cmake {
+//            path file('src/main/cpp/CMakeLists.txt')
+//            version '3.22.1'
+//        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.0.21'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.21'
+    implementation 'androidx.activity:activity-ktx:1.10.0'
+    implementation 'com.github.megatronking.stringfog:xor:5.0.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}
